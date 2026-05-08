@@ -18,5 +18,5 @@
          :main-opts ["-m" "reviewdesk.test-runner"]}
   :formsmith {:extra-deps {io.github.M-simplifier/formsmith
                            {:git/url "https://github.com/M-simplifier/formsmith.git"
-                            :git/sha "1a383e3cc547ef2a8623529dc5bfa27ce635373d"}}
+                            :git/sha "4560e549afd1dfea167f37bbf506bb433ae73b09"}}
               :main-opts ["-m" "formsmith.main"]}}}
