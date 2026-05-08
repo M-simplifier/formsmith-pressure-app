@@ -27,8 +27,8 @@ http://localhost:8080
 This repo consumes the public `formsmith` artifact through a git dependency:
 
 ```clojure
-{:git/tag "v0.1.0-pre.4"
- :git/sha "a2449935781fc6f3b2b4451aa3e8e30e0bbc9abf"}
+{:git/tag "v0.1.0-pre.5"
+ :git/sha "4bd1d7228aebf24a0cc7b80c83c84396ea7d1fbc"}
 ```
 
 ```bash
