@@ -1,0 +1,14 @@
+{
+  "name": "formsmith-pressure-app",
+  "private": true,
+  "scripts": {
+    "build": "shadow-cljs release app"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^3.2.1"
+  }
+}

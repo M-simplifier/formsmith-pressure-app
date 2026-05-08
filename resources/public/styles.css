@@ -1,0 +1,217 @@
+:root {
+  color-scheme: light;
+  --ink: #18202a;
+  --muted: #667085;
+  --line: #d8dee8;
+  --panel: #ffffff;
+  --surface: #f6f7f9;
+  --accent: #0f766e;
+  --accent-ink: #ffffff;
+  --warn: #b45309;
+  --bad: #b42318;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font: 14px/1.45 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.sidebar {
+  border-right: 1px solid var(--line);
+  background: #111827;
+  color: #f9fafb;
+  padding: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.nav-list,
+.cards,
+.signals {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list button {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  color: #d1d5db;
+  padding: 9px 8px;
+  cursor: pointer;
+}
+
+.nav-list button.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.main {
+  padding: 22px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.toolbar h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 18px;
+}
+
+.panel,
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.panel {
+  padding: 16px;
+}
+
+.cards {
+  display: grid;
+  gap: 10px;
+}
+
+.card {
+  padding: 14px;
+}
+
+.card header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card h2 {
+  font-size: 15px;
+  margin: 0 0 4px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.status {
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+.status.blocked {
+  color: var(--bad);
+}
+
+.status.reviewing {
+  color: var(--warn);
+}
+
+.status.ready {
+  color: var(--accent);
+}
+
+.signals {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.signals li {
+  border-left: 3px solid var(--line);
+  padding-left: 8px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  display: grid;
+  gap: 4px;
+  color: var(--muted);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 9px;
+  color: var(--ink);
+  background: #ffffff;
+}
+
+textarea {
+  min-height: 86px;
+  resize: vertical;
+}
+
+.primary {
+  border: 0;
+  border-radius: 6px;
+  padding: 9px 12px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  .shell,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+  }
+}

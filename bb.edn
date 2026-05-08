@@ -1,0 +1,11 @@
+{:tasks
+ {test {:doc "Run backend tests"
+        :task (shell "clojure -M:test")}
+  cljs-release {:doc "Build optimized ClojureScript bundle"
+                :task (shell "npx" "shadow-cljs" "release" "app")}
+  formsmith-check {:doc "Run public formsmith as a CI gate"
+                   :task (shell "clojure -M:formsmith check src test")}
+  formsmith-aggressive-preview {:doc "Preview deeper formsmith suggestions"
+                                :task (shell "clojure -M:formsmith fix --check --aggressive src test")}
+  ci {:doc "Run the pressure-app CI set"
+      :depends [test cljs-release formsmith-check]}}}

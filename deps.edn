@@ -1,0 +1,22 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.12.4"}
+        org.clojure/clojurescript {:mvn/version "1.12.42"}
+        ring/ring-core {:mvn/version "1.14.2"}
+        ring/ring-jetty-adapter {:mvn/version "1.14.2"}
+        ring/ring-json {:mvn/version "0.5.1"}
+        metosin/reitit-ring {:mvn/version "0.8.0"}
+        metosin/malli {:mvn/version "0.19.1"}
+        integrant/integrant {:mvn/version "0.13.1"}
+        thheller/shadow-cljs {:mvn/version "3.2.1"}
+        reagent/reagent {:mvn/version "1.3.0"}
+        re-frame/re-frame {:mvn/version "1.4.3"}
+        cljs-ajax/cljs-ajax {:mvn/version "0.8.4"}}
+ :aliases
+ {:run {:main-opts ["-m" "reviewdesk.main"]}
+  :test {:extra-paths ["test"]
+         :extra-deps {ring/ring-mock {:mvn/version "0.6.2"}}
+         :main-opts ["-m" "reviewdesk.test-runner"]}
+  :formsmith {:extra-deps {io.github.M-simplifier/formsmith
+                           {:git/url "https://github.com/M-simplifier/formsmith.git"
+                            :git/sha "1a383e3cc547ef2a8623529dc5bfa27ce635373d"}}
+              :main-opts ["-m" "formsmith.main"]}}}

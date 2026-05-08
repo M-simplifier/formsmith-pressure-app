@@ -1,0 +1,3 @@
+{:ignore-paths ["target"
+                "resources/public/js"
+                "node_modules"]}
